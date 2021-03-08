@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>m-commerce</title>
+    <style>
+      .test{
+        width: 20rem;
+        height: 10rem;
+        background-color: pink;
+        text-align: center;
+      }
+      .hello{
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <div class="test">
+      <p class="hello"> hello yuanyuan</p>
+    </div>
+
+    <script>
+      //获取屏幕的大小
+      let htmlwidth = document.documentElement.clientWidth || document.body.clientWidth;
+      //获取元素节点
+      let htmlDOM=document.getElementsByTagName('html')[0];
+
+      //让html的font-size的大小随屏幕大小变化而变化
+      htmlDOM.style.fontSize=htmlwidth /20 +'px'
+      console.log(htmlwidth);
+      console.log(htmlDOM);
+    </script>
+  </body>
+</html>
