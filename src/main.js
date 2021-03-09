@@ -3,9 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import {button} from 'vant'
+import {button,Row,Col,Swipe,SwipeItem ,Lazyload} from 'vant'
 
-Vue.use(button)
+
+Vue.use(button).use(Row).use(Col).use(Swipe).use(SwipeItem).use(Lazyload)
 
 //引入vant第一种方法
 // import vant from 'vant'
