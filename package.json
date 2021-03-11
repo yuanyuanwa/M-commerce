@@ -10,8 +10,13 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "axios": "^0.21.1",
+    "cnpm": "^6.1.1",
+    "install": "^0.13.0",
+    "swiper": "^6.5.0",
     "vant": "^2.12.8",
     "vue": "^2.5.2",
+    "vue-awesome-swiper": "^4.1.1",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
@@ -42,6 +47,8 @@
     "postcss-loader": "^2.0.8",
     "postcss-url": "^7.2.1",
     "rimraf": "^2.6.0",
+    "sass": "^1.32.8",
+    "sass-loader": "^11.0.1",
     "semver": "^5.3.0",
     "shelljs": "^0.7.6",
     "uglifyjs-webpack-plugin": "^1.1.1",
@@ -62,5 +69,15 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "main": ".postcssrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuanyuanwa/M-commerce.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuanyuanwa/M-commerce/issues"
+  },
+  "homepage": "https://github.com/yuanyuanwa/M-commerce#readme"
 }
