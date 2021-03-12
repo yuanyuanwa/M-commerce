@@ -104,8 +104,8 @@
         <!--这里需要一个list组件-->
         <van-list>
           <!-- gutter="20"每列要留一些空隙 -->
-          <van-row gutter="20">
-            <van-col span='12' v-for="(item,index) in hotGoods" :key="index">
+          <van-row >
+            <van-col span='12' v-for="(item,index) in hotGoods" :key="index" style="padding-left=0">
               <goodsInfo :goodsImage='item.image' :goodsName="item.name" :goodsPrice="item.price"></goodsInfo>
             </van-col>
           </van-row>

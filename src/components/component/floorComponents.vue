@@ -52,11 +52,12 @@ export default {
 </script>
 
 <style lang="less" scoped>
+
 .floor {
   .floor-anomaly {
     display: flex;
     border-bottom: 1px solid #eee;
-    // background-color: pink;
+    background-color: white;
     div {
       width: 10rem;
       box-sizing: border-box;
@@ -70,6 +71,7 @@ export default {
     }
   }
   .floor-rule {
+    background-color: white;
     display: flex;
     flex-wrap: wrap;
     // width: 10rem;
@@ -88,7 +90,7 @@ export default {
 }
 .floor-title{
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
     height: 1.8rem;
     color: #cc99cc;
     font-weight: bold;
