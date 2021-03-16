@@ -4,20 +4,40 @@ const app=new Koa()
 const mongoose=require('mongoose')
 
 const Router=require('koa-router')
+const bodyParser = require('koa-bodyparser')
+
 
 let user=require('./appApi/user')
 let home=require('./appApi/home')
+let goods=require('./appApi/goods')
+
+
+const cors = require('koa2-cors')
+
+//两个顺序不能变
+app.use(bodyParser())
+// 处理跨域，放到中间件的最前面
+app.use(cors());
+
 
 //装载所有子路由
 let router=new Router()
 
-router.use('/ss',user.routes())//ss访问路由的路劲
-router.use('/hh',home.routes())//hh
-//egg.js
+router.use('/ss',user.routes())//访问路由的路劲
+router.use('/hh',home.routes())
+router.use('/goods',goods.routes())
 
 //加载路由中间件
 app.use(router.routes())
 app.use(router.allowedMethods())
+
+
+
+;(async()=>{
+    await connect()
+    //添加数据,再次插入会失败
+    initSchemas()
+})()
 
 
 // ;(async()=>{

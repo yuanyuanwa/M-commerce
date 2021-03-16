@@ -2,6 +2,8 @@
 const mongoose =require('mongoose')
 const Schema =mongoose.Schema
 let ObjectId=Schema.Types.ObjectId
+
+//加盐加密引用的主件
 const bcrypt=require('bcrypt')
 const SALT_WORK_FACTOR=10
 
@@ -12,7 +14,12 @@ const userSchema =new Schema({
     password:String,
     createAt:{type:Date,default:Date.now()},
     lastLoginAt:{type:Date,default:Date.now()}
-})//加盐：让用户简单的密码加一下东西不那么容易破解
+},
+// {
+//     collation:'user'
+// }//让mango表的名字是user
+
+)//加盐：让用户简单的密码加一下东西不那么容易破解
 
 //加盐加密处理，每次保存的时候，就触发一个匿名函数（先加盐，后加密）
 userSchema.pre('save',function(next){
@@ -27,6 +34,19 @@ userSchema.pre('save',function(next){
         })
     })
 })
+
+userSchema.methods={
+    //_password客户端接收过来的密码，password数据库存的密码
+    comparePassword:(_password,password)=>{
+        return new Promise((resolve,reject)=>{
+            //bcrypt加盐加密的组件
+            bcrypt.compare(_password,password,(err,isMatch)=>{
+                if(!err)resolve(isMatch)
+                else reject(err)
+            })
+        })
+    }
+}
 
 
 //发布模型

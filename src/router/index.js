@@ -4,6 +4,8 @@ import Router from 'vue-router'
 import ShoppingMail from '@/components/pages/ShoppingMail'
 import S from '@/components/swiper/swiperDefault2'
 import Register from '@/components/pages/Register'
+import Login from '@/components/pages/Login'
+import Goods from '@/components/pages/Goods'
 
 
 
@@ -14,6 +16,8 @@ export default new Router({
   routes: [
     { path: '/',name: 'ShoppingMail',component: ShoppingMail},
     { path: '/register',name: 'Register',component: Register},
+    { path: '/login',name: 'Login',component: Login},
+    { path: '/goods',name: 'Goods',component: Goods},
     { path: '/b',name: 'ww',component: S},
 
   ]

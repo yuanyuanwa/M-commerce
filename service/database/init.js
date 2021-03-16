@@ -1,9 +1,12 @@
+//Schema建立好以后，需要我们载入这些数据库
 const mongoose =require('mongoose')
 const db='mongodb://localhost/mec'
 
 const glob = require('glob')
 const {resolve} = require('path')
 
+
+//一次性引入所有的Schema文件
 exports.initSchemas=()=>{
     glob.sync(resolve(__dirname,'./schema','**/*.js')).forEach(require)
 }

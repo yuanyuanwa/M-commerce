@@ -106,7 +106,7 @@
           <!-- gutter="20"每列要留一些空隙 -->
           <van-row >
             <van-col span='12' v-for="(item,index) in hotGoods" :key="index" style="padding-left=0">
-              <goodsInfo :goodsImage='item.image' :goodsName="item.name" :goodsPrice="item.price"></goodsInfo>
+              <goodsInfo :goodsImage='item.image' :goodsName="item.name" :goodsPrice="item.price" :goodsId='item.goodsId'></goodsInfo>
             </van-col>
           </van-row>
         </van-list>
@@ -182,6 +182,7 @@ export default {
   },
   created() {
     axios({
+      //  url:'https://www.fastmock.site/mock/672a975c04670f5e6d31191cf317570c/ecommerce/index'
       url:url.getShoppingMailInfo,
       method: "get",
     })
@@ -200,6 +201,7 @@ export default {
           // this.floor1_2 = this.floor1[2];
           this.ftitle = response.data.data.floorName;
           this.hotGoods=response.data.data.hotGoods
+          // console.log(this.hotGoods);
         }
       })
       .catch((error) => {
