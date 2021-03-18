@@ -13,6 +13,9 @@ const URL={
     registerURL:LOCALURL+'ss/register', //用户注册接口
     login:LOCALURL+'ss/login', //用户注册接口
     getDetailGoodsInfo:LOCALURL+'goods/getDetailGoodsInfo', //用户获取商品详情
+    getCategoryList:LOCALURL+'goods/getCategoryList', //获取大类信息
+    getCategorySubList:LOCALURL+'goods/getCategorySubList', //获取小类信息
+    getGoodsListByCategorySubID:LOCALURL+'goods/getGoodsListByCategorySubID', //获取商品列表信息
 }
 
 module.exports=URL;

@@ -99,20 +99,30 @@
 
     <!--Hot Area-->
     <div class="hot-area">
-      <div class="hot-title">——热卖商品——</div>
+      <div class="hot-title">—— 热卖商品 ——</div>
       <div class="hot-goods">
         <!--这里需要一个list组件-->
         <van-list>
           <!-- gutter="20"每列要留一些空隙 -->
-          <van-row >
-            <van-col span='12' v-for="(item,index) in hotGoods" :key="index" style="padding-left=0">
-              <goodsInfo :goodsImage='item.image' :goodsName="item.name" :goodsPrice="item.price" :goodsId='item.goodsId'></goodsInfo>
+          <van-row>
+            <van-col
+              span="12"
+              v-for="(item, index) in hotGoods"
+              :key="index"
+              style="padding-left=0"
+            >
+              <goodsInfo
+                :goodsImage="item.image"
+                :goodsName="item.name"
+                :goodsPrice="item.price"
+                :goodsId="item.goodsId"
+              ></goodsInfo>
             </van-col>
           </van-row>
         </van-list>
+        ----我是有底线的----
       </div>
     </div>
-
   </div>
 </template>
 
@@ -127,9 +137,9 @@ import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper";
 
 import floorComponents from "../component/floorComponents";
 
-import goodsInfo from "../component/goodsInfoComponents"
+import goodsInfo from "../component/goodsInfoComponents";
 
-import url from "@/serviceAPI.config.js"
+import url from "@/serviceAPI.config.js";
 
 // 没有使用deflute，所以要加一个括号,@代表src文件夹
 import { toMoney } from "@/filter/moneyFilter.js";
@@ -160,7 +170,7 @@ export default {
       // floor1_1: {},
       // floor1_2: {},
       ftitle: {},
-      hotGoods:[]//热卖商品
+      hotGoods: [], //热卖商品
     };
   },
   filters: {
@@ -175,7 +185,6 @@ export default {
     // swiperDefault2
     floorComponents,
     goodsInfo,
-    
   },
   directives: {
     swiper: directive,
@@ -183,7 +192,7 @@ export default {
   created() {
     axios({
       //  url:'https://www.fastmock.site/mock/672a975c04670f5e6d31191cf317570c/ecommerce/index'
-      url:url.getShoppingMailInfo,
+      url: url.getShoppingMailInfo,
       method: "get",
     })
       .then((response) => {
@@ -200,7 +209,7 @@ export default {
           // this.floor1_1 = this.floor1[1];
           // this.floor1_2 = this.floor1[2];
           this.ftitle = response.data.data.floorName;
-          this.hotGoods=response.data.data.hotGoods
+          this.hotGoods = response.data.data.hotGoods;
           // console.log(this.hotGoods);
         }
       })
@@ -270,6 +279,7 @@ export default {
   div {
     font-size: 12px;
     padding: 0.3rem;
+    flex:1;
   }
 }
 
@@ -292,16 +302,20 @@ export default {
     // }
   }
 }
-.hot-title{
-      text-align: center;
-      font-size:14px;
-      height: 1.8rem;
-      line-height:1.8rem;
-      color: #cc99cc;
-     font-weight: bold;
-     border-bottom: 1px solid #eee;
-  }
-  .hot-goods{
-    font-size:12px;
-  }
+.hot-title {
+  text-align: center;
+  font-size: 12px;
+  height: 1.8rem;
+  line-height: 1.8rem;
+  color: #cc99cc;
+  font-weight: bold;
+  border-bottom: 1px solid #eee;
+}
+.hot-goods {
+  font-size: 12px;
+  height: 118rem;
+  overflow: hidden;
+
+
+}
 </style>

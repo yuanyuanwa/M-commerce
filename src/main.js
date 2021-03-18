@@ -3,13 +3,13 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import {Tab,Tabs,button,Row,Col,Swipe,SwipeItem ,Lazyload,List,Field,NavBar} from 'vant'
+import {Tabbar,TabbarItem,Stepper,PullRefresh,Tab,Tabs,button,Row,Col,Swipe,SwipeItem ,Lazyload,List,Field,NavBar} from 'vant'
 
 // import VueAwesomeSwiper from 'vue-awesome-swiper'
 // import 'swiper/swiper-bundle.css'
 
 
-Vue.use(button).use(Row).use(Col).use(Swipe).use(SwipeItem).use(Lazyload).use(List).use(Field).use(NavBar).use(Tab).use(Tabs)
+Vue.use(Tabbar).use(TabbarItem).use(button).use(Row).use(Col).use(Swipe).use(SwipeItem).use(Lazyload).use(List).use(Field).use(NavBar).use(Tab).use(Tabs).use(PullRefresh).use(Stepper)
 // Vue.use(VueAwesomeSwiper)
 
 //引入vant第一种方法
