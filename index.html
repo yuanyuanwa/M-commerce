@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
     <!-- user-scalable=no:禁止用户缩放 -->
+    <link rel="icon" href="./icon.jpg">
     <title>m-commerce</title>
   <style>
     body{
@@ -33,6 +34,15 @@
       htmlDOM.style.fontSize=htmlwidth /20 +'px'
       // console.log(htmlwidth);
       // console.log(htmlDOM);
+
+      //写入cookie
+      function a(key,value){
+        console.log(key);
+        console.log(value);
+        console.log(1);
+        document.cookie = key + '=' + value
+    }
+    a('yuanyu','sdsds')
     </script>
   </body>
 </html>

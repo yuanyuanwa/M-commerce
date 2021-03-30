@@ -267,6 +267,8 @@ export default {
         //name，使用params是隐藏的，刷新会被清空，path使用query会出现在地址栏，刷新不会被清空
       this.$router.push({ name: "Goods", query: { goodsId: id } });
     },
+
+  
   },
 };
 </script>
