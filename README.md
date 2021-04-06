@@ -8,21 +8,26 @@
 ## 安装
 
 ``` bash
+
+# 启动后台
 # install dependencies
-npm install
+cd ./service && npm install
+
+# 启动MongoDB
+mongod --dbpath /usr/local/var/mongodb --logpath /usr/local/var/log/mongodb/mongo.log --fork
+
+# 运行服务
+cd ./service && node index.js
+
+
+# install dependencies
+cd ../ && npm install
 
 # serve with hot reload at localhost:8080
 npm run dev
 
 # build for production with minification
 npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-# 启动MongoDB
-mongod --dbpath /usr/local/var/mongodb --logpath /usr/local/var/log/mongodb/mongo.log --fork
-# 运行服务
-cd ./service && node index.js
 
 ```
 
