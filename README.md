@@ -1,8 +1,22 @@
-# mecommerce
+# 移动电商系统
 
-> A Vue.js project
+## 介绍
+> 移动电商系统，包括首页展示，类别展示，购物功能，注册登录，积分系统，查找页面，后台接口设置
+<center class="half">
+<img src="http://doo.cn-gd.ufileos.com/img/m1.png" height="200px" width="125px" />
+<img src="http://doo.cn-gd.ufileos.com/img/m2.png" height="200px" width="125px" />
+</center>
 
-## Build Setup
+<center class="half">
+<img src="http://doo.cn-gd.ufileos.com/img/m3.png" height="200px" width="125px" />
+<img src="http://doo.cn-gd.ufileos.com/img/m4.png" height="200px" width="125px" />
+</center>
+
+
+
+#### 技术栈包括
+> Vue+Router+Vant+Node+Koa2+Mongoose+MongoDB
+## 安装
 
 ``` bash
 # install dependencies
@@ -16,6 +30,10 @@ npm run build
 
 # build for production and view the bundle analyzer report
 npm run build --report
+# 启动MongoDB
+mongod --dbpath /usr/local/var/mongodb --logpath /usr/local/var/log/mongodb/mongo.log --fork
+# 运行服务
+cd ./service && node index.js
+
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

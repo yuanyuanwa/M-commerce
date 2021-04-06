@@ -58,7 +58,7 @@ export default {
   },
   computed:{
     //计算属性是基于它们的响应式依赖进行缓存的。只在相关响应式依赖发生改变时它们才会重新求值。
-    // 点击加减号会让双向绑定的count变化，引起cartInfo的变化，所以会重新求值
+    //点击加减号会让双向绑定的count变化，引起cartInfo的变化，所以会重新求值
     totalMoney(){
       let allMoney=0
       console.log(this.cartInfo);
