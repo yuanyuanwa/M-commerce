@@ -9,7 +9,8 @@
 
 ``` bash
 
-# 启动后台
+# 启动后端
+
 # install dependencies
 cd ./service && npm install
 
@@ -19,6 +20,9 @@ mongod --dbpath /usr/local/var/mongodb --logpath /usr/local/var/log/mongodb/mong
 # 运行服务
 cd ./service && node index.js
 
+
+
+# 启动前端
 
 # install dependencies
 cd ../ && npm install
