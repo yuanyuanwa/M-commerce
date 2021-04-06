@@ -2,17 +2,11 @@
 
 ## 介绍
 > 移动电商系统，包括首页展示，类别展示，购物功能，注册登录，积分系统，查找页面，后台接口设置
-<center class="half">
-<img src="http://doo.cn-gd.ufileos.com/img/m1.png" height="200px" width="125px" />
-<img src="http://doo.cn-gd.ufileos.com/img/m2.png" height="200px" width="125px" />
-</center>
 
-<center class="half">
-<img src="http://doo.cn-gd.ufileos.com/img/m3.png" height="200px" width="125px" />
-<img src="http://doo.cn-gd.ufileos.com/img/m4.png" height="200px" width="125px" />
-</center>
-
-
+![image](http://doo.cn-gd.ufileos.com/img/m1.png)
+![image](http://doo.cn-gd.ufileos.com/img/m2.png)
+![image](http://doo.cn-gd.ufileos.com/img/m3.png)
+![image](http://doo.cn-gd.ufileos.com/img/m4.png)
 
 #### 技术栈包括
 > Vue+Router+Vant+Node+Koa2+Mongoose+MongoDB
